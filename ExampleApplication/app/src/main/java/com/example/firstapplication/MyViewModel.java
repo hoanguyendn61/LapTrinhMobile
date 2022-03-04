@@ -33,7 +33,10 @@ public class MyViewModel extends ViewModel{
     public void setNumber(String i){
         number.setValue(Integer.parseInt(i));
     }
-
+    public void changeNumber(int i, String num){
+        al.set(i,num);
+        listItems.setValue(al);
+    }
     public void addNumber(String num){
         al.add(num);
         listItems.setValue(al);

@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private MyViewModel model;
     private ArrayAdapter<String> arrayAdapter;
     private static final int REQ_CODE = 6100;
+    private int index;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
 //                return false;
 //            }
 //        });
+
         // send data to another activity and wait for result
         ActivityResultLauncher<Intent> someActivityResultLauncher = registerForActivityResult(
                 new ActivityResultContracts.StartActivityForResult(),
@@ -75,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
                             Intent data = result.getData();
                             String extra = data.getStringExtra("number");
                             model.setNumber(extra);
-                            model.addNumber(extra);
+                            model.changeNumber(index, extra);
                         }
                     }
                 });
@@ -85,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 intent.putExtra("number",((TextView) view).getText().toString());
+                index = i;
                 someActivityResultLauncher.launch(intent);
             }
         });
