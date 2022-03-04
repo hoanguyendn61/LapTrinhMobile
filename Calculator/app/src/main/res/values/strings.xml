@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="numb_zero">0</string>
+    <string name="numb_one">1</string>
+    <string name="numb_two">2</string>
+    <string name="numb_three">3</string>
+    <string name="numb_four">4</string>
+    <string name="numb_five">5</string>
+    <string name="numb_six">6</string>
+    <string name="numb_seven">7</string>
+    <string name="numb_eight">8</string>
+    <string name="numb_nine">9</string>
+    <string name="dot">.</string>
+    <string name="clear">C</string>
+    <string name="equal">=</string>
+    <string name="negative">+/-</string>
+    <string name="backspace">➝</string>
+    <string name="add">+</string>
+    <string name="sub">-</string>
+    <string name="multiply">×</string>
+    <string name="div">÷</string>
+    <string name="M1_0">M₁: 0</string>
+    <string name="numbers">999999999</string>
+    <string name="MC">MC</string>
+    <string name="MR">MR</string>
+    <string name="Mminus">M-</string>
+    <string name="Mplus">M+</string>
+    <string name="author">Nguyễn Huy Hòa</string>
+</resources>
