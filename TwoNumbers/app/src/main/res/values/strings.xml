@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">TwoNumbers</string>
+    <string name="a_str">a</string>
+    <string name="b_str">b</string>
+    <string name="title">Two Numbers</string>
+    <string name="add">+</string>
+    <string name="subtract">-</string>
+    <string name="multiply">*</string>
+    <string name="divide">/</string>
+</resources>
