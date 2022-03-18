@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">ContactApp</string>
+    <string name="name">John Doe</string>
+    <string name="saving_to">Saving to</string>
+    <string name="search">Search</string>
+    <string name="save">Save</string>
+    <string name="device">Device</string>
+    <string name="email">Email</string>
+    <string name="lastName">Last Name</string>
+    <string name="firstName">First Name</string>
+    <string name="phoneNumber">Phone Number</string>
+</resources>

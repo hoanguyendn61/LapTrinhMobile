@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ContactApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        <!-- android:textColorPrimary: Màu chữ Tiêu đề  -->
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <!-- actionMenuTextColor: Màu chữ Menu  -->
+        <item name="actionMenuTextColor">@android:color/white</item>
+        <!-- Tints -->
+        <item name="colorAccent">@color/colorSecondaryVariant</item>
+        <!-- Màu áp dụng cho các View ở trạng thái bình thường -->
+        <item name="colorControlNormal">#fff</item>
+        <!-- Màu View đang hoạt động -->
+        <item name="colorControlActivated">@color/white</item>
+        <!-- Highlight (i.e ripples or list selectors) -->
+        <item name="colorControlHighlight">#111</item>
+    </style>
+</resources>
