@@ -1,23 +1,52 @@
 package com.example.contactapp;
 
+import android.graphics.Bitmap;
+
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
+
+import java.io.Serializable;
 
 @Entity(tableName = "Contact")
 public class Contact {
     @PrimaryKey(autoGenerate = true)
     private int id;
-    @ColumnInfo(name = "name")
-    private String name;
+    @ColumnInfo(name="avatar")
+    private Bitmap avatar;
+    @ColumnInfo(name = "first_name")
+    private String firstname;
+    @ColumnInfo(name = "last_name")
+    private String lastname;
     @ColumnInfo(name = "phone")
     private String phone;
     @ColumnInfo(name = "email")
     private String email;
-    public Contact(String name, String phone, String email) {
-        this.name = name;
+
+    public Contact(Bitmap avatar, String firstname, String lastname, String phone, String email) {
+        this.avatar = avatar;
+        this.firstname = firstname;
+        this.lastname = lastname;
         this.phone = phone;
         this.email = email;
+    }
+    public Contact(){
+
+    }
+    public String getFirstname() {
+        return firstname;
+    }
+
+    public void setFirstname(String firstname) {
+        this.firstname = firstname;
+    }
+
+    public String getLastname() {
+        return lastname;
+    }
+
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
     }
 
     public int getId() {
@@ -27,13 +56,12 @@ public class Contact {
     public void setId(int id) {
         this.id = id;
     }
-
-    public String getName() {
-        return name;
+    public Bitmap getAvatar() {
+        return avatar;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setAvatar(Bitmap avatar) {
+        this.avatar = avatar;
     }
 
     public String getPhone() {
@@ -56,7 +84,7 @@ public class Contact {
     public String toString() {
         return "Contact{" +
                 "id=" + id +
-                ", name='" + name + '\'' +
+                ", name='" + firstname + lastname + '\'' +
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
                 '}';

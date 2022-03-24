@@ -25,6 +25,12 @@ public class ContactViewModel extends AndroidViewModel {
     public void insertContact(Contact dataItem) {
         mContactRepository.insert(dataItem);
     }
+    public void updateContact(Contact dataItem){
+        mContactRepository.update(dataItem);
+    }
+    public void getContactByName(String firstName, String lastName){
+        mContactRepository.getContactByName(firstName, lastName);
+    }
 //    public void deleteItem(DataItem dataItem) {
 //        mDataRepository.deleteItem(dataItem);
 //    }

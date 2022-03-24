@@ -12,6 +12,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.Parcelable;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -20,6 +21,7 @@ import android.view.View;
 import android.widget.Toolbar;
 
 import com.example.contactapp.databinding.ActivityMainBinding;
+import com.google.gson.Gson;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +56,17 @@ public class MainActivity extends AppCompatActivity {
         actionBar.setTitle("Contacts");
         RecyclerView.LayoutManager linearLayout = new LinearLayoutManager(getApplicationContext());
         binding.rvContact.setLayoutManager(linearLayout);
-        mContactAdapter = new ContactAdapter(getApplicationContext());
+        mContactAdapter = new ContactAdapter(getApplicationContext(), new ContactAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(Contact item) {
+                Log.i(TAG, item.toString());
+                Gson gson = new Gson();
+                String myJson = gson.toJson(item);
+                Intent intent = new Intent(getApplicationContext(), DetailActiviy.class);
+                intent.putExtra("contactItem", myJson);
+                startActivity(intent);
+            }
+        });
         binding.rvContact.setAdapter(mContactAdapter);
         mContactVM.getAllContact().observe(this, new Observer<List<Contact>>() {
             @Override
@@ -99,11 +111,6 @@ public class MainActivity extends AppCompatActivity {
         }
         mContactList.clear();
         mContactList.addAll(itemList);
-        if (mContactAdapter == null){
-            Log.i(TAG, "Create new ContactAdapter");
-            mContactAdapter = new ContactAdapter(getApplicationContext());
-            binding.rvContact.setAdapter(mContactAdapter);
-        }
         mContactAdapter.setListContact(itemList);
     }
 }

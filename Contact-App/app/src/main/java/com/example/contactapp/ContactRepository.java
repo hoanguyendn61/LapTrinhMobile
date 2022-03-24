@@ -23,11 +23,16 @@ public class ContactRepository {
         return mAllContact;
     }
 
+    public Contact getContactByName(String firstName, String lastName){
+        return mContactDao.getContact(firstName, lastName);
+    }
     // You must call this on a non-UI thread or your app will crash
     public void insert(Contact dataItem) {
         new insertAsyncTask(mContactDao).execute(dataItem);
     }
-
+    public void update(Contact dataItem){
+        new updateAsyncTask(mContactDao).execute(dataItem);
+    }
     private static class insertAsyncTask extends AsyncTask<Contact, Void, Void> {
         private ContactDao mAsyncTaskDao;
         insertAsyncTask(ContactDao dao) {
@@ -40,7 +45,17 @@ public class ContactRepository {
             return null;
         }
     }
-
+    private static class updateAsyncTask extends AsyncTask<Contact, Void, Void>{
+        private ContactDao mAsyncTaskDao;
+        updateAsyncTask(ContactDao dao) {
+            mAsyncTaskDao = dao;
+        }
+        @Override
+        protected Void doInBackground(Contact... contacts) {
+            mAsyncTaskDao.updateContacts(contacts);
+            return null;
+        }
+    }
 //    public void deleteItem(DataItem dataItem) {
 //        new deleteAsyncTask(mDataDao).execute(dataItem);
 //    }
