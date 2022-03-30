@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Woof Woof</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bredfor">Bred for:</string>
+    <string name="breedgroup">Breed group:</string>
+    <string name="lifespan">Life span:</string>
+    <string name="origin">Origin:</string>
+    <string name="temperament">Temperament:</string>
+    <string name="height">Height:</string>
+    <string name="weight">Weight:</string>
 </resources>

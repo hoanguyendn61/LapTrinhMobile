@@ -6,8 +6,10 @@
         <entry key="..\:/Download/Study/HOC/YEAR_3/HOCKY_II/Mobile/AndroidProjects/DogApp/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2265" />
         <entry key="..\:/Download/Study/HOC/YEAR_3/HOCKY_II/Mobile/AndroidProjects/DogApp/app/src/main/res/drawable/heart.xml" value="0.2265" />
         <entry key="..\:/Download/Study/HOC/YEAR_3/HOCKY_II/Mobile/AndroidProjects/DogApp/app/src/main/res/drawable/ic_launcher_background.xml" value="0.2265" />
-        <entry key="..\:/Download/Study/HOC/YEAR_3/HOCKY_II/Mobile/AndroidProjects/DogApp/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Download/Study/HOC/YEAR_3/HOCKY_II/Mobile/AndroidProjects/DogApp/app/src/main/res/layout/item_dog.xml" value="0.264" />
+        <entry key="..\:/Download/Study/HOC/YEAR_3/HOCKY_II/Mobile/AndroidProjects/DogApp/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Download/Study/HOC/YEAR_3/HOCKY_II/Mobile/AndroidProjects/DogApp/app/src/main/res/layout/fragment_detail.xml" value="0.4" />
+        <entry key="..\:/Download/Study/HOC/YEAR_3/HOCKY_II/Mobile/AndroidProjects/DogApp/app/src/main/res/layout/fragment_list.xml" value="0.25416666666666665" />
+        <entry key="..\:/Download/Study/HOC/YEAR_3/HOCKY_II/Mobile/AndroidProjects/DogApp/app/src/main/res/layout/item_dog.xml" value="0.536" />
       </map>
     </option>
   </component>
@@ -16,5 +18,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.264" />
+      </ProjectState>
+    </option>
   </component>
 </project>
